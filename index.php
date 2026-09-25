@@ -94,7 +94,7 @@
 
         <div class="hero-image">
 
-            <img src="images/img1.png"
+            <img src="images/img2.jpg"
                  alt="Vehicle Service Management System">
 
         </div>
