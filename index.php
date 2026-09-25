@@ -65,7 +65,7 @@
                 service operations from one place.
             </p>
 
-            <a href="bookings.php" class="hero-button">
+            <a href="pages/bookings.php" class="hero-button">
                 Create Service Booking
             </a>
 
@@ -272,7 +272,7 @@
 
             </div>
 
-            <a href="bookings.php" class="view-all-button">
+            <a href="pages/bookings.php" class="view-all-button">
                 View All
             </a>
 
