@@ -36,11 +36,11 @@
 
         <a href="index.php" class="active">Dashboard</a>
 
-        <a href="pages/customers.php">
+        <a href="customers.php">
             Customers
         </a>
 
-        <a href="pages/bookings.php">
+        <a href="bookings.php">
             Service Bookings
         </a>
 
@@ -93,8 +93,8 @@
 
             <h3>Total Customers</h3>
 
-            <p>0</p>
-
+            <p id="totalCustomers">0</p>
+            
         </article>
 
 
@@ -106,7 +106,7 @@
 
             <h3>Active Bookings</h3>
 
-            <p>0</p>
+            <p id="activeBookings">0</p>
 
         </article>
 
@@ -119,7 +119,7 @@
 
             <h3>Estimated Revenue</h3>
 
-            <p>Rs. 0.00</p>
+            <p id="estimatedRevenue">Rs. 0.00</p>
 
         </article>
 
@@ -154,7 +154,7 @@
 
                     <span>Oil Change</span>
 
-                    <strong>0</strong>
+                   <strong id="oilChangeCount">0</strong>
 
                 </div>
 
@@ -163,7 +163,7 @@
 
                     <span>Full Service</span>
 
-                    <strong>0</strong>
+                   <strong id="fullServiceCount">0</strong>
 
                 </div>
 
@@ -172,7 +172,7 @@
 
                     <span>Brake Service</span>
 
-                    <strong>0</strong>
+                    <strong id="brakeServiceCount">0</strong>
 
                 </div>
 
@@ -181,7 +181,7 @@
 
                     <span>Engine Service</span>
 
-                    <strong>0</strong>
+                    <strong id="engineServiceCount">0</strong>
 
                 </div>
 
@@ -190,7 +190,7 @@
 
                     <span>AC Service</span>
 
-                    <strong>0</strong>
+                    <strong id="acServiceCount">0</strong>
 
                 </div>
 
@@ -220,7 +220,7 @@
 
             <div class="quick-actions">
 
-                <a href="pages/customers.php"
+                <a href="customers.php"
                    class="dashboard-button">
 
                     <span class="button-icon">👤</span>
@@ -235,7 +235,7 @@
                 </a>
 
 
-                <a href="pages/bookings.php"
+                <a href="bookings.php"
                    class="dashboard-button">
 
                     <span class="button-icon">📅</span>
@@ -301,18 +301,17 @@
 
                 </thead>
 
-
-                <tbody>
+                <tbody id="recentBookingsTable">
 
                     <tr>
 
                         <td colspan="5" class="empty-message">
-                            No service bookings available.
+                            Loading recent bookings...
                         </td>
 
                     </tr>
+                </tbody> 
 
-                </tbody>
 
             </table>
 
