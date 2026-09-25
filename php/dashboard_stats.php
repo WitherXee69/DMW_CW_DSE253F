@@ -3,11 +3,14 @@
 
 require_once "db.php";
 
-header('Content-Type: application/json; charset=utf-8');
+header("Content-Type: application/json; charset=utf-8");
 
 try {
 
-    
+    /* =========================================
+       TOTAL CUSTOMERS
+       ========================================= */
+
     $customerQuery = $conn->query(
         "SELECT COUNT(*) AS total_customers
          FROM customers"
@@ -15,10 +18,13 @@ try {
 
     $customerData = $customerQuery->fetch(PDO::FETCH_ASSOC);
 
-    $totalCustomers = (int) $customerData['total_customers'];
+    $totalCustomers = (int) $customerData["total_customers"];
 
 
-   
+    /* =========================================
+       ACTIVE BOOKINGS
+       ========================================= */
+
     $activeQuery = $conn->query(
         "SELECT COUNT(*) AS active_bookings
          FROM service_bookings
@@ -27,10 +33,13 @@ try {
 
     $activeData = $activeQuery->fetch(PDO::FETCH_ASSOC);
 
-    $activeBookings = (int) $activeData['active_bookings'];
+    $activeBookings = (int) $activeData["active_bookings"];
 
-    // revenue 
-   
+
+    /* =========================================
+       ESTIMATED REVENUE
+       ========================================= */
+
     $revenueQuery = $conn->query(
         "SELECT COALESCE(SUM(estimated_cost), 0) AS estimated_revenue
          FROM service_bookings
@@ -39,10 +48,13 @@ try {
 
     $revenueData = $revenueQuery->fetch(PDO::FETCH_ASSOC);
 
-    $estimatedRevenue = (float) $revenueData['estimated_revenue'];
+    $estimatedRevenue = (float) $revenueData["estimated_revenue"];
 
-    //count bookings by service type
-   
+
+    /* =========================================
+       BOOKINGS BY SERVICE TYPE
+       ========================================= */
+
     $serviceQuery = $conn->query(
         "SELECT service_type, COUNT(*) AS total
          FROM service_bookings
@@ -53,14 +65,14 @@ try {
 
     while ($row = $serviceQuery->fetch(PDO::FETCH_ASSOC)) {
 
-        $serviceOverview[$row['service_type']] = (int) $row['total'];
+        $serviceOverview[$row["service_type"]] = (int) $row["total"];
     }
 
 
-    /*recent bookings
-    get the last 5 bookings 
-    */
-    
+    /* =========================================
+       RECENT BOOKINGS
+       ========================================= */
+
     $recentQuery = $conn->query(
         "SELECT
             b.booking_id,
@@ -81,29 +93,32 @@ try {
     while ($row = $recentQuery->fetch(PDO::FETCH_ASSOC)) {
 
         $recentBookings[] = [
-            'booking_id' => (int) $row['booking_id'],
-            'customer_name' => $row['customer_name'],
-            'vehicle_number' => $row['vehicle_number'],
-            'service_type' => $row['service_type'],
-            'service_date' => $row['service_date'],
-            'status' => $row['status']
+            "booking_id" => (int) $row["booking_id"],
+            "customer_name" => $row["customer_name"],
+            "vehicle_number" => $row["vehicle_number"],
+            "service_type" => $row["service_type"],
+            "service_date" => $row["service_date"],
+            "status" => $row["status"]
         ];
     }
 
-    //send  the dashboard data
+
+    /* =========================================
+       SEND DASHBOARD DATA
+       ========================================= */
 
     echo json_encode([
-        'success' => true,
+        "success" => true,
 
-        'statistics' => [
-            'total_customers' => $totalCustomers,
-            'active_bookings' => $activeBookings,
-            'estimated_revenue' => $estimatedRevenue
+        "statistics" => [
+            "total_customers" => $totalCustomers,
+            "active_bookings" => $activeBookings,
+            "estimated_revenue" => $estimatedRevenue
         ],
 
-        'service_overview' => $serviceOverview,
+        "service_overview" => $serviceOverview,
 
-        'recent_bookings' => $recentBookings
+        "recent_bookings" => $recentBookings
     ]);
 
 } catch (PDOException $e) {
@@ -111,9 +126,8 @@ try {
     http_response_code(500);
 
     echo json_encode([
-        'success' => false,
-        'message' => 'Unable to load dashboard statistics.'
+        "success" => false,
+        "message" => "Unable to load dashboard statistics."
     ]);
 }
 ?>
-
