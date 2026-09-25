@@ -90,8 +90,8 @@ try {
         ];
     }
 
-    //send  the dashboard data //
-        
+    //send  the dashboard data
+
     echo json_encode([
         'success' => true,
 
