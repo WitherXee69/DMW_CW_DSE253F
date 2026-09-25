@@ -183,7 +183,7 @@ function sortLink($column, $currentSort, $currentOrder, $search) {
 
     <div class="header-content">
 
-        <img src="images/img1.png"
+        <img src="../images/img1.png"
              alt="Vehicle Service Management System Logo"
              class="logo">
 
@@ -196,13 +196,13 @@ function sortLink($column, $currentSort, $currentOrder, $search) {
 
     <nav aria-label="Main Navigation">
 
-        <a href="index.php" class="active">Dashboard</a>
+        <a href="../index.php">Dashboard</a>
 
-        <a href="pages/customers.php">
+        <a href="customers.php" class="active">
             Customers
         </a>
 
-        <a href="pages/bookings.php">
+        <a href="bookings.php">
             Service Bookings
         </a>
 
@@ -362,14 +362,13 @@ function sortLink($column, $currentSort, $currentOrder, $search) {
 
         <div class="table-footer">Showing <?= count($customers) ?> customer(s)</div>
     </section>
-
-    <footer>
+</main>
+<footer>
 
     <p>
         2026 Vehicle Service Management System
     </p>
 
 </footer>
-</main>
 </body>
 </html>
