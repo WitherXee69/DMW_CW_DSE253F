@@ -36,11 +36,11 @@
 
         <a href="index.php" class="active">Dashboard</a>
 
-        <a href="customers.php">
+        <a href="pages/customers.php">
             Customers
         </a>
 
-        <a href="bookings.php">
+        <a href="pages/bookings.php">
             Service Bookings
         </a>
 
@@ -220,7 +220,7 @@
 
             <div class="quick-actions">
 
-                <a href="customers.php"
+                <a href="pages/customers.php"
                    class="dashboard-button">
 
                     <span class="button-icon">👤</span>
@@ -235,7 +235,7 @@
                 </a>
 
 
-                <a href="bookings.php"
+                <a href="pages/bookings.php"
                    class="dashboard-button">
 
                     <span class="button-icon">📅</span>

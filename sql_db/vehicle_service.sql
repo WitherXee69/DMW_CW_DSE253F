@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 25, 2026 at 07:09 AM
+-- Generation Time: Sep 25, 2026 at 07:59 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `vehicle_service`
 --
+CREATE DATABASE IF NOT EXISTS `vehicle_service` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `vehicle_service`;
 
 -- --------------------------------------------------------
 

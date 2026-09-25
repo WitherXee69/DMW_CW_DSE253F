@@ -16,9 +16,63 @@
 
     <title>Service Bookings - Vehicle Service Management System</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <style>
+
+        /* =========================================
+           PAGE HEADER
+           ========================================= */
+
+        .booking-page-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .booking-page-heading .eyebrow {
+            display: inline-block;
+            color: #2563eb;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .booking-page-heading h2 {
+            font-size: 32px;
+            margin-bottom: 6px;
+            color: #1f2937;
+        }
+
+        .booking-page-heading p {
+            color: #555;
+        }
+
+        .booking-total-badge {
+            background-color: white;
+            padding: 22px 24px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            min-width: 170px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .booking-total-badge span {
+            font-size: 12px;
+            color: #777;
+        }
+
+        .booking-total-badge strong {
+            font-size: 28px;
+            color: #1f2937;
+            line-height: 1.4;
+        }
 
         /* =========================================
            BOOKING FORM
@@ -191,7 +245,7 @@
 
     <nav aria-label="Main Navigation">
 
-        <a href="index.php">
+        <a href="../index.php">
             Dashboard
         </a>
 
@@ -210,6 +264,18 @@
 
 <main>
 
+    <section class="booking-page-heading">
+        <div>
+            <span class="eyebrow">BOOKING MANAGEMENT</span>
+            <h2>Service Bookings</h2>
+            <p>Manage vehicle service bookings and appointments.</p>
+        </div>
+
+        <div class="booking-total-badge">
+            <span>Total bookings</span>
+            <strong>0</strong>
+        </div>
+    </section>
 
     <!-- =========================================
          CREATE BOOKING
