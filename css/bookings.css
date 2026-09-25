@@ -1,0 +1,359 @@
+/* =========================================
+   BOOKING PAGE - MATCH DASHBOARD / CUSTOMERS
+   ========================================= */
+
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+
+.booking-page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.booking-page-heading .eyebrow {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.booking-page-heading h2 {
+    font-size: 32px;
+    margin-bottom: 6px;
+    color: #1f2937;
+}
+
+.booking-page-heading p {
+    color: #555;
+}
+
+.booking-total-badge {
+    background-color: white;
+    padding: 22px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    min-width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.booking-total-badge span {
+    font-size: 12px;
+    color: #777;
+}
+
+.booking-total-badge strong {
+    font-size: 28px;
+    color: #1f2937;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   ALERTS
+   ========================================= */
+
+.alert {
+    padding: 13px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.alert.success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.alert.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* =========================================
+   BOOKING FORM
+   ========================================= */
+
+.booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #374151;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.form-button {
+    border: none;
+    cursor: pointer;
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.submit-button {
+    background-color: #2563eb;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #1d4ed8;
+}
+
+.reset-button {
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+.reset-button:hover {
+    background-color: #e5e7eb;
+}
+
+
+/* =========================================
+   SEARCH
+   ========================================= */
+
+.booking-search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.booking-search input {
+    flex: 1;
+    min-width: 250px;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.booking-search input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.search-button,
+.clear-button {
+    border: none;
+    cursor: pointer;
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.search-button {
+    background-color: #2563eb;
+    color: white;
+}
+
+.search-button:hover {
+    background-color: #1d4ed8;
+}
+
+.clear-button {
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+.clear-button:hover {
+    background-color: #e5e7eb;
+}
+
+
+/* =========================================
+   BOOKING TABLE
+   ========================================= */
+
+.booking-table {
+    min-width: 950px;
+}
+
+.booking-table th a {
+    color: #374151;
+    text-decoration: none;
+}
+
+.booking-table th a:hover {
+    color: #2563eb;
+}
+
+.id-badge {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+
+/* =========================================
+   STATUS BADGES
+   ========================================= */
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-confirmed {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-completed {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-cancelled {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+   ========================================= */
+
+.action-buttons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.action-button {
+    border: none;
+    cursor: pointer;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.edit-button {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.edit-button:hover {
+    background-color: #bfdbfe;
+}
+
+.delete-button {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.delete-button:hover {
+    background-color: #fecaca;
+}
+
+.delete-form {
+    display: inline;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        grid-column: auto;
+    }
+
+    .booking-page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .booking-total-badge {
+        width: 100%;
+    }
+
+    .booking-search {
+        flex-direction: column;
+    }
+
+    .booking-search input {
+        width: 100%;
+    }
+
+    .search-button,
+    .clear-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .action-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .delete-form {
+        display: flex;
+    }
+
+}
